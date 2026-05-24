@@ -19,15 +19,20 @@ The extension runs locally in your browser. It uses your existing Bilibili login
 
 ## Install Locally
 
+Clone the repository:
+
+```bash
+git clone https://github.com/<your-name>/bilibili-watchlater.git
+cd bilibili-watchlater
+```
+
+Then load the unpacked extension:
+
 1. Open Chrome or Edge.
 2. Visit `chrome://extensions/`.
 3. Enable Developer Mode.
 4. Click `Load unpacked`.
-5. Select this directory:
-
-```text
-/Users/chenhanze/Library/CloudStorage/OneDrive-fzu.edu.cn/code/project/bilibili-watchlater-extension-poc
-```
+5. Select the cloned `bilibili-watchlater` directory.
 
 ## First Run
 
