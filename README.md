@@ -1,5 +1,7 @@
 # Bilibili Watchlater
 
+[中文说明](README.zh-CN.md)
+
 Bilibili Watchlater is a Chrome/Edge extension that adds selected Bilibili UP owners' latest videos to your own Watch Later list.
 
 The extension runs locally in your browser. It uses your existing Bilibili login state, stores settings in `chrome.storage.local`, and does not upload your cookies or sync history to a third-party server.
@@ -22,7 +24,7 @@ The extension runs locally in your browser. It uses your existing Bilibili login
 Clone the repository:
 
 ```bash
-git clone https://github.com/<your-name>/bilibili-watchlater.git
+git clone https://github.com/Holmze/bilibili-watchlater.git
 cd bilibili-watchlater
 ```
 
