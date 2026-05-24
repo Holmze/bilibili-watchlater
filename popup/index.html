@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bilibili Watchlater</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="header">
+        <div>
+          <h1>Bilibili Watchlater</h1>
+          <p id="mode">Loading...</p>
+        </div>
+        <a href="../options/index.html" target="_blank">Options</a>
+      </header>
+
+      <section class="summary" id="summary">No sync yet.</section>
+
+      <section class="toolbar">
+        <button id="sync" type="button">Sync now</button>
+        <button id="toggleAuto" type="button" class="secondary">Auto sync</button>
+        <button id="addCurrent" type="button" class="secondary">Add page UP</button>
+        <button id="diagnose" type="button" class="secondary">Diagnose</button>
+      </section>
+
+      <section class="panel">
+        <h2>Latest Results</h2>
+        <div id="results" class="results"></div>
+      </section>
+
+      <section class="panel compact">
+        <h2>Diagnostics</h2>
+        <pre id="diagnostics"></pre>
+      </section>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

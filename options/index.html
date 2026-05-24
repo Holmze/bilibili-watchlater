@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bilibili Watchlater Options</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <h1>Bilibili Watchlater</h1>
+          <p>Manage UP owners, sync rules, and publishing-safe local settings.</p>
+        </div>
+        <button id="save" type="button">Save</button>
+      </header>
+
+      <section class="overview" id="overview">
+        <div>
+          <span>Mode</span>
+          <strong id="overviewMode">Dry-run</strong>
+        </div>
+        <div>
+          <span>Auto Sync</span>
+          <strong id="overviewAuto">Off</strong>
+        </div>
+        <div>
+          <span>UP Owners</span>
+          <strong id="overviewOwners">0</strong>
+        </div>
+        <div>
+          <span>Status</span>
+          <strong id="status">Ready</strong>
+        </div>
+      </section>
+
+      <section class="layout">
+        <section class="panel">
+          <h2>Run Mode</h2>
+          <label class="check">
+            <input id="dryRun" type="checkbox" checked>
+            <span>Dry-run only</span>
+          </label>
+          <label class="check">
+            <input id="autoSyncEnabled" type="checkbox">
+            <span>Auto sync with browser alarms</span>
+          </label>
+          <label class="check">
+            <input id="allowAutoLiveSync" type="checkbox">
+            <span>Allow auto live sync when dry-run is off</span>
+          </label>
+        </section>
+
+        <section class="panel">
+          <h2>Sync Limits</h2>
+          <div class="grid">
+            <label class="field">
+              <span>Diagnostic UP mid</span>
+              <input id="testMid" type="number" min="1" value="946974">
+            </label>
+            <label class="field">
+              <span>Alarm minutes</span>
+              <input id="alarmPeriodMinutes" type="number" min="1" value="30">
+            </label>
+            <label class="field">
+              <span>Page size</span>
+              <input id="pageSize" type="number" min="1" max="50" value="10">
+            </label>
+            <label class="field">
+              <span>Max age hours</span>
+              <input id="maxAgeHours" type="number" min="1" value="72">
+            </label>
+            <label class="field">
+              <span>Add interval seconds</span>
+              <input id="addIntervalSeconds" type="number" min="0" max="60" value="2">
+            </label>
+            <label class="field">
+              <span>Failed cooldown minutes</span>
+              <input id="failedCooldownMinutes" type="number" min="1" value="60">
+            </label>
+            <label class="field">
+              <span>Fetch retries</span>
+              <input id="fetchRetryCount" type="number" min="0" max="5" value="1">
+            </label>
+            <label class="field">
+              <span>Add retries</span>
+              <input id="addRetryCount" type="number" min="0" max="5" value="1">
+            </label>
+          </div>
+        </section>
+      </section>
+
+      <section class="panel">
+        <div class="section-title">
+          <div>
+            <h2>UP Owners</h2>
+            <p>Avatars and names are refreshed from Bilibili when settings are saved.</p>
+          </div>
+          <div class="actions">
+            <button id="refreshProfiles" type="button" class="secondary">Refresh Profiles</button>
+            <button id="addOwner" type="button" class="secondary">Add UP</button>
+          </div>
+        </div>
+        <div id="owners" class="owners"></div>
+      </section>
+
+      <section class="panel">
+        <div class="section-title">
+          <div>
+            <h2>Import / Export</h2>
+            <p>Exports settings only. Cookies and account credentials are never included.</p>
+          </div>
+          <div class="actions">
+            <button id="exportConfig" type="button" class="secondary">Export</button>
+            <button id="importConfig" type="button" class="secondary">Import</button>
+          </div>
+        </div>
+        <textarea id="configJson" spellcheck="false"></textarea>
+      </section>
+    </main>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>
